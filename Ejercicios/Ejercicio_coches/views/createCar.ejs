@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/socradog.css" />
+    <nav>
+      <div class="logo">
+        <img class="logo__imagen" src="./images/logoPerro.png" alt="logo" />
+        <p class="logo__nombre">SocraDog</p>
+      </div>
+      <div class="cuidadores">
+        <a href="/">home</a>
+        <a href="/cars/allCars">nuestros coches</a>
+        <a href="/cars/createCar">crear Coches</a>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>creador de coches</h1>
+
+    <form action="/cars/createCar" method="post" enctype="multipart/form-data">
+      <input type="text" name="brand" placeholder="marca" />
+      <input type="text" name="model" placeholder="modelo" />
+      <input type="text" name="color" placeholder="color" />
+      <input type="file" name="img" id="" />
+      <button type="submit">Guardar</button>
+    </form>
+  </body>
+</html>

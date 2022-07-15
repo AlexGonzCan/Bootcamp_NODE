@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/socradog.css" />
+    <title>Document</title>
+    <nav>
+      <div class="logo">
+        <img class="logo__imagen" src="./images/logoPerro.png" alt="logo" />
+        <p class="logo__nombre">SocraDog</p>
+      </div>
+      <div class="cuidadores">
+        <a href="/">home</a>
+        <a href="/cars/allCars">nuestros coches</a>
+        <a href="/cars/createCar">crear Coches</a>
+      </div>
+    </nav>
+  </head>
+  <body>
+    <h1>Coches Creados</h1>
+
+    <% result.forEach(car => { %>
+    <h2>Marca:<%= car.brand %></h2>
+    <p>Modelo:<%= car.model %></p>
+    <p>color:<%= car.color %></p>
+    <br />
+    <br />
+    <button><a href="/cars/perfil/<%= car.car_id %>">ver perfil</a></button>
+    <button><a href="/cars/deleteCar/<%= car.car_id %>">Eliminar</a></button>
+    <% }) %>
+  </body>
+</html>

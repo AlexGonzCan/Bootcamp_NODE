@@ -1,0 +1,79 @@
+1-- Pocisionarse en la carpeta raiz donde quieras crear el  servidor automatico.
+
+2-- Habrimos un terminar en Command Prompt.
+
+	$ express --view=ejs nombre_carpeta // 5.Express_generator ejemplo
+
+
+3-- Nos posicionamos en la raiz de la carpeta creada instalamos el servidor express.
+
+	$ npm install
+
+
+4-- Creamos el archivo .gitignore en la raíz de mi proyecto y ponemos dentro la carpeta node_modules.
+
+		# dependecies
+		/node_modules
+
+
+5-- Instalamos  nodemon.
+
+	npm install --save-dev nodemon
+
+
+
+6-- Script en package.json
+
+	"scripts": {
+    		"start": "nodemon ./bin/www"
+  	}
+
+
+7-- Instarlar librerias mysql.
+
+	$ npm install mysql
+
+
+8-- creamos una carpeta en al raiz llamado config y un archivo db.js dentro y metemos el codigo
+
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost', //localhost:3000 por defecto
+  user     : 'root',
+  password : 'root',
+  database: "" //nombre de la base de datos
+});
+ 
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+ 
+  console.log('Conexion Correcta!');
+});
+
+module.exports = connection;
+
+9-- Nos vamos Mysql Workbench seleccionamos la base de datos SHEMAS(columna de la izquierda). selecionamos la tabla y selecionamos el icono tercero pequeño del rayo.
+Añadimos el codigo este y lo ejecutamos con el rayo.
+
+
+ 	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
+
+10-- Agregar en los archivos  donde vamos a utilizar  una base de datos tendremos que añadirle aparte de las 3 lineas, la linea del la data base
+
+const connection = require("../config/db");
+
+
+11-- Aquellos metodos en los que necesite ejecutar una consulta a la base de datos.
+
+ 
+12-- Levantamos el servidor.
+
+	$ npm start
+
+
+

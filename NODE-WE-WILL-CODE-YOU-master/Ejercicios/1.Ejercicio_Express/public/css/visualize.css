@@ -1,0 +1,75 @@
+body {
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+header .avatar {
+  width: clamp(180px, 20vw, 350px);
+  height: clamp(180px, 20vw, 350px);
+  border-radius: 50%;
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.137);
+  margin: 100px auto 50px auto;
+}
+header .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header p {
+  padding: 0 10vw;
+}
+header .icons {
+  display: flex;
+  justify-content: center;
+}
+header .icons div {
+  width: clamp(40px, 10vw, 100px);
+  height: clamp(40px, 10vw, 100px);
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.137);
+  margin: 2vw;
+}
+header .icons div img {
+  width: 70%;
+  height: 70%;
+}
+
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+main .columna {
+  width: 28%;
+}
+main .columna div {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.267);
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+main .columna div img {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .columna {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

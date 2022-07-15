@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/syle.css" />
+  </head>
+  <body>
+    <h1>vista del formulario</h1>
+    <!-- en el action="/Formulario" -->
+    <form action="/Formulario" method="post">
+      <!-- method="post" para mandarlo al servidor -->
+
+      <label for="name">Nombre de la Calle:</label>
+      <input type="text" id="name" name="nameCalle" />
+      <!-- atributo name="" para que lo
+      mande al back -->
+
+      <br />
+      <br />
+      <label for="num">Numero de la calle</label>
+      <input type="number" id="numCalle" max="100" min="18" name="numCalle" />
+      <!-- atributo
+      name="" para que lo mande al back
+               -->
+      <br />
+      <br />
+      <select name="provincia">
+        <option value="">Elige Provincia</option>
+        <option value="Alava">Álava</option>
+        <option value="Albacete">Albacete</option>
+      </select>
+      <br />
+      <br />
+      <button type="submit">Enviar</button>
+      <!-- type="submit" para poder enviarlo -->
+    </form>
+  </body>
+</html>

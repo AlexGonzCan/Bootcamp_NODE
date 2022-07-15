@@ -1,0 +1,10 @@
+1.- Crear un servidor con express.
+2.- Tendrá una ruta get (localhost:3000/home/x/x/x). Recogemos de la url esos tres parámetros dinámicos y los guardamos un variables llamadas "casa", "metros", "habitaciones". Cuando los recogemos los enviamos de vuelta al front interpolados en un string.
+3.- Tendrá una ruta get que(localhost:3000/inquilinos/x/x). Recogemos los dos parámetros de la url y los guardamos en variables llamadas "numero_inquilinos" y "precio_alquiler".
+4.- Tendrá una ruta get que mandará como respuesta un html que contendrá un formulario.
+5.- Tendrá una ruta post que recogerá los datos del formulario y los mandará al front interpolados en un string.
+6.- El html del formulario tendrá un h1 que diga "vista del formulario" y este h1 estará centrado y será de color rojo (los estilos estará en un css dentro de una carpeta public).
+7.- El formulario tendrá un input de tipo text que recoja la calle, un intput de tipo number que recoja el número y un select con tres opciones que recoja la provincia. 
+Footer
+© 2022 GitHub, Inc.
+Footer navigation

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Vista de todos los usuarios</h1>
+
+    <form action="/users" method="post">
+      <input type="text" name="name" placeholder="nombre" />
+      <input type="text" name="surname" placeholder="apellidos" />
+      <input type="number" name="age" placeholder="edad" />
+      <button type="submit">Guardar</button>
+    </form>
+
+    <% result.forEach(user => { %>
+    <h2>Nombre:<%= user.name %></h2>
+    <p>Apellido:<%= user.surname %></p>
+    <p>Edad:<%= user.age %></p>
+
+    <button>
+      <a href="/users/oneUser/<%= user.user_id %>">Ver Perfil</a>
+    </button>
+    <button>
+      <a href="/users/deleteUser/<%= user.user_id %>">Eliminar</a>
+    </button>
+    <br />
+    <br />
+    <% }) %>
+  </body>
+</html>

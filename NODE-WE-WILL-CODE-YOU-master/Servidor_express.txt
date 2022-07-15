@@ -1,0 +1,49 @@
+1.- Creamos la carpeta contenedora del servidor.
+2.- Creamos un archivo principal llamado index.js o app.js.
+3.- En la termina, nos movemos hasta la carpeta contenedora de nuestro servidor
+y ejecutamos el comando $ npm init  o $ npm init -y para generar el archivo package.json
+4.- Instalamos express con el comando $ npm install express --save  . Nos 
+aseguramos que aparece en el package.json y la carpeta node_modules.
+5.- Instalamos nodemon con el comando $ npm install --save-dev nodemon  . 
+6.- Creamos un nuevo script en nuestro package.json para que nodemon ejecute el 
+archivo principal.
+7.- Creamos el archivo .gitignore en la raíz de mi proyecto y ponemos dentro la 
+carpeta node_modules.
+8.- Cogemos el código básico del servidor que nos ofrece Express en la pestaña 
+"Hello World" y lo pegamos en nuestro archivo principal. 
+9.- Asegurándonos de que todos los archivos están guardados, podemos levantar 
+nuestro servidor con el comando $ npm start
+10.- Probamos nuestro servidor poniendo en el navegador "localhost:3000"
+11.- Para vincular archivos estáticos (imágenes, css, javascript, audios, videos...) a nuestros html tenemos que crear una ruta estática hacia esos archivos y ponerla en nuestro archivo js principal.
+12.- Los links de css vinculados a nuestro html partirán de la carpeta public, al igual que todas las imágenes, independientemente de si están en html o css.
+13.- Parámetros dinámicos: para crear una ruta dinámica tenemos que introducir 
+parámetros dinámicos precedidos de /:  puedo introducir todos los que quiera. El
+nombre que yo le doy a los parámetros dinámicos en mi métodos será el nombre con el que recogeré la información de mi petición.
+14.- Tenemos que recoger la información de los parámetros dinámicos y guardarla 
+en variables. Podemos hacer destructuring si el nombre de la variable coincide con 
+el nombre del parámetro dinámico. 
+15.- MÉTODO POST: primero tenemos que instanciar el método urlencoded y el método json de la libría body-parser. Para ello tenemos que requerirla o podemos utilizar diréctament express para instanciar esos métodos puesto que ya los tiene integrados. 
+    app.use(express.urlencoded({ extends: false }));
+    app.use(express.json());    
+
+16.- Creamos un formulario en un html. Imprescindible que tenga la etiqueta form y un botón para enviar, de tipo submit. También, la etiqueta de apertura de mi form tendrá un atributo method= "post" y un atributo action en el cual introduciré la ruta que se ejecutará cuando le de a mi botón de enviar (la ruta del método post).
+17.- Los inputs del formulario han de tener un atributo name, ha de ser diferente en cada inputs y este será el nombre con el que recogeremos la información en el back.
+18.- En mi servidor creo un método post y del req.body recojo la información del formulario. 
+19.- Debemos distribuir nuestros endpoints entre diferente archivos de rutas. Para ello creamos una carpeta llamada routes y dentro tantos archivos de rutas como necesitemos.
+20.- En estos archivo de rutas deben haber 3 líneas mínimas de código. La primera es para requerir la librería de express. La segunda es para instanciar el método Router de express y guardarlo en una constante llamada router. La tercera es para exportar la constante router (esta se deberá dejar al final de cada archivo de rutas).
+21.- En el index o app principal de mi servidor tengo que requerir los archivos de rutas e indicar una ruta base de entrada a cada uno de mis archivos. Por ejemplo: 
+
+        const productRouter = require("./routes/product.js");
+        // localhost:3000/product
+        app.use("/product", productRouter);
+
+22.- En los archivos de rutas los endpoints se establecen con la constante router (aquí no existe app).
+23.- En el archivo principal estára el método urlencoded y json (que se utilaban para poder capturar la información del req.body). También aquí estará el método static para indicar el lugar de la carpeta de archivos estáticos. 
+
+
+POSTMAN
+
+1.- Abrimos una nueva pestaña dándole a +
+2.- Elegimos el método (get, post, put...) y ponemos la url a comprobrar.
+3.- Si es un método post, tenemos que darle a la pestaña body y escoger la opción 
+x-www-form-urlencoded e ir introduciendo en la parte izquierda los name de los inputs del formulario y a la derecha su valor.

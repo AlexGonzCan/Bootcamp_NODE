@@ -1,0 +1,12 @@
+    1.- Crear un proyecto con Express con las 2 librerias que estamos utilizando hasta ahora
+    2.- Crear 3 rutas principales(3 archivos de ruta) distinta :
+                                            - Index
+                                            - User
+                                            - Technology
+
+
+    3.- Que: -Index muestre el Pretty.html que hicimos con su css (el primer get muestre la pagina pretty y el otra ruta que muestre un mensaje)
+ 
+    4.- User muestre un formulario y envie 5 tipos de datos: nombre, apellido, edad, altura, trabajo 
+    5.- User (post) que recoja los datos y los muestre por pantalla
+    6.- Technology muestre un html que querais(como lo querais)*Sorpresa*

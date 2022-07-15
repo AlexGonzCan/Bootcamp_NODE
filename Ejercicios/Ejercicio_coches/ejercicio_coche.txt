@@ -1,0 +1,19 @@
+1.- Crear un proyecto (servidor) con express generator, que se llame 4.Ejercicio_coches
+2.- Crear un archivo de rutas llamado car.js
+3.- Este archivo de rutas ha de contener una ruta que te muestre todos los coches 
+guardados en base de datos en una vista llamada allCars. 
+4.- En este archivo ha de existir un método que te renderice una vista nueva (createCar.ejs) en la 
+que habrá un formulario para crear coches.
+5.- En el mismo archivo (car.js) habrá un método que recogerá los datos del formulario
+y los guardará en la base de datos.
+6.- Después de guardar el nuevo coche este método nos redirigirá a la vista allCars.
+7.- En el archivo de rutas index.js habrá un método que nos mostrará la vista index.ejs
+en la que crearemos una barra de navegación y una portada o simulación de el home 
+de una web. 
+8.- En la barra de navegación ha de haber un botón que nos lleve a la vista de 
+todos los coches y un botón que nos lleve al propio home y otro para mostrar el formulario
+de crear coche.
+9.- La barra de navegación ha de estar presente en todas las vistas y ha de ser 
+funcional en todas ellas. 
+10.- La base de datos se ha de llamar Cars y la tabla se llamará car
+11.- La tabla car contendrá los siguientes campos: car_id, brand, model y color
