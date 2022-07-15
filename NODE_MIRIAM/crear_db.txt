@@ -1,0 +1,16 @@
+1.- Nos vamos a la columna izquierda donde están todas nuestras bases de datos.
+2.- Hacemos click con el botón derecho en el espacio en blanco que hay debajo de
+la última db que tengamos.
+3,. Escogemos la opción "Create Schema"
+4.- Ponemos nombre a la base de datos y cambiamos la codificación de caracteres.
+5.- Pulsamos en Apply > apply > finish
+6.- Actualizamos la columna izquierda si no vemos la db creada.
+7.- Desplegamos la nueva db y hacemos click con el botón derecho sobre la palabra
+table.
+8.- Escogemos la opción "create table"
+9.- Ponemos nombre a la tabla, escogemos codificación de caracteres y creamos los 
+campos o columnas de mi tabla  haciendo doble clik.
+10.- La primary key de la tabla será autoincrement.
+11.- Cuando tengamos todos los campos le damos Apply > apply > finish.
+12.- Si queremos insertar datos en la tabla. Ponemos el ratón sobre la columna 
+izquierda en el nombre de la tabla y pulsamos el tercer icono.

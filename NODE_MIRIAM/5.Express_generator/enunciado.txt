@@ -1,0 +1,4 @@
+1.- Crear un archivo de rutas llamado product.
+2.- Ese archivo debe tener un método get que renderice una vista llamada formProduct.
+3.- En la vista formProduct debe haber un formulario que recoja el nombre y la categoría del producto. Esta vista ha de tener algún estilo css.
+4.- En el archivo de rutas product.js debe haber un método que recoja los datos del formulario y los muestr por pantalla. 

@@ -56,6 +56,8 @@ connection.connect(function(err) {
 
 module.exports = connection;
 
+
+
 9-- Nos vamos Mysql Workbench seleccionamos la base de datos SHEMAS(columna de la izquierda). selecionamos la tabla y selecionamos el icono tercero pequeño del rayo.
 Añadimos el codigo este y lo ejecutamos con el rayo.
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <nav>
+      <button><a href="/home">HOME</a></button>
+      <button><a href="/contacto">CONTACTO</a></button>
+      <button><a href="/miPerfil">MI PERFIL</a></button>
+    </nav>
+    <h1>Esta es la vista de contacto</h1>
+    <form action="/registerForm" method="post">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" />
+
+      <br />
+      <br />
+      <label for="last_name">Apellido</label>
+      <input type="text" id="last_name" name="surname" />
+
+      <br />
+      <br />
+
+      <label for="age">Edad</label>
+      <input type="number" id="age" max="100" min="18" name="age" />
+      <br />
+      <br />
+      <button type="submit">Enviar</button>
+      <!-- <input type="submit" value="Enviar" /> -->
+    </form>
+  </body>
+</html>

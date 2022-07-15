@@ -1,9 +1,9 @@
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-  host: "localhost", //localhost:3000 por defecto
+  host: "localhost",
   user: "root",
   password: "root",
-  database: "castillo", //nombre de la base de datos
+  database: "users",
 });
 
 connection.connect(function (err) {
@@ -12,7 +12,7 @@ connection.connect(function (err) {
     return;
   }
 
-  console.log("Conexion Correcta!");
+  console.log("Conexión correcta");
 });
 
 module.exports = connection;

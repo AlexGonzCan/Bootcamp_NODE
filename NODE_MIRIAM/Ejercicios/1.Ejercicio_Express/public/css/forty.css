@@ -1,0 +1,117 @@
+hr {
+  height: 2px !important;
+  background-color: white;
+  opacity: 1 !important;
+}
+
+body {
+  color: white !important;
+}
+
+nav {
+  background-color: RGB(35, 41, 67);
+  position: fixed;
+  width: 100%;
+}
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+}
+nav div p {
+  margin-bottom: 0;
+}
+nav div p span {
+  background-color: white;
+  color: RGB(35, 41, 67);
+  font-weight: bold;
+}
+nav div button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  border-width: 1px;
+}
+
+.principal {
+  background-color: RGB(35, 41, 67);
+}
+.principal div {
+  padding: 11vw 8vw 8vw 8vw;
+}
+.principal div button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 3px;
+}
+
+.seccion2 .izquierda {
+  padding: 10vw 8vw 10vw 8vw;
+  background-color: RGB(111, 195, 223);
+}
+.seccion2 .derecha {
+  padding: 10vw 8vw 10vw 8vw;
+  background-color: RGB(141, 130, 196);
+}
+
+.seccion3 .izquierda {
+  padding: 10vw 8vw 10vw 8vw;
+  background-color: RGB(235, 141, 129);
+}
+.seccion3 .derecha {
+  padding: 10vw 8vw 10vw 8vw;
+  background-color: RGB(231, 183, 135);
+}
+
+.seccion4 .izquierda {
+  padding: 10vw 8vw 10vw 8vw;
+  background-color: RGB(141, 169, 232);
+}
+.seccion4 .derecha {
+  padding: 10vw 8vw 10vw 8vw;
+  background-color: RGB(136, 197, 164);
+}
+
+footer {
+  background-color: RGB(35, 41, 67);
+  padding: 10vw 8vw 10vw 8vw;
+}
+footer hr {
+  width: 40%;
+}
+footer button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 3px;
+}
+footer input {
+  margin: 10px 0;
+}
+footer .pareja_input {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .pareja_input input {
+  width: 48%;
+}
+footer .input_solitario {
+  width: 100% !important;
+}
+footer .mail p {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .mail {
+    margin-top: 20px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,57 @@
+1.- Ejecutar en la terminal cmd el comando express --view=ejs nombre_carpeta
+2.- Entrar en la carpeta generada y ejecutar el comando npm install.
+3.- Instalar nuevas dependencias( mysql, nodemon).
+4.- Cambiar el script para que ponga nodemon en lugar de node.
+5.- Generar el archivo .gitignore
+6.- Crear una carpeta config con un archivo js que contenga la configuración de
+conexión con la base de datos.
+7.- Cambiar en esa configuración el nombre de la base de datos.
+8.- Exportar la configuración de la db.
+9.- Requerir la configuración del archivo db.js en los archivos de rutas en los 
+que se requiera.
+10.- En aquellos métodos en los que necesite ejecutar una consulta a la base de 
+datos tengo que utilizar el método query. 
+11.- Si no hay ningún error en la consulta tenemos que decidir qué queremos mostrar
+en el navegador. Por tanto tendremos que decir entre los métodos send, render o 
+redirect.
+12.- El método send enviará un texto al navegador.
+13.- El método render enviará una vista que puede llevar o no, algún resultado. 
+14.- El método redirect ejecutará otra nueva petición que otro endpoint que tengamos
+en nuestro servidor (se suele utilizar después de hacer una inserción o modificación)
+ en la base de datos.
+ 15.- Cuidado en las consultas, hay que poner comillas cuando interpolamos una 
+ variable de tipo string. 
+ 16.- Método eliminar: en este método deberíamos utilizar el método http delete, 
+ pero debido a que trabajos con vistas sólo vamos a poder ejecutar métodos post y
+ get. Así que lo vamos a crear con el método get.
+        Necesitamos en la ruta de este método un parámetro dinámico con el id del 
+        usuario que queremos eliminar. 
+        Necesitamos en alguna de las vistas (la de todos los usuarios o la de un único
+        usuario), un botón de eliminar que ejecute la ruta anterior y que tenga interpolado
+        el id del usuiario a eliminar. 
+17.- Método para ver el perfil de un usuario: Necesitamos un botón que ejecute un método get
+que renderice la vista del usuario único. La ruta de este método ha de tener un parámetro dinámico
+que será el id del usuario que quiero ver. En el método recogeré ese parámetro dinámico
+y haré una consulta para sacar la info del usuario y el resultado de esta consulta 
+se lo mandaré a la vista en el momento de renderizarla.
+
+18.- MULTER: es la librería que utilizamos para cargar archivos.
+    Creamos una carpeta llamada middleware donde ponemos la configuración de multer, tal 
+    y como hemos hecho en la carpeta 6.conexión_mysql.
+    En los archivos de rutas donde vamos a recoger en un método post, algún tipo de 
+    imagen o video,... hemos de Requerir la configuración de multer.
+    En ese método post hemos de poner como segundo parámetro la constante en la que habíamos
+    requerido multer (con los paréntesis).
+    Dentro del método post capturamos el nombre del archivo guardado del req.file.filename y 
+    lo interpolamos en la consulta.
+
+    En el formulario que lleve el input de tipo file hay que poner, en la etiqueta form de apertura
+    un atributo llamado enctype con el valor multipar/form-data.
+
+    Comprobar que en la bd, la tabla correspondiente tiene un campo para guardar la img.
+
+    OJO!! el name del input de tipo file debe coincidir con el name que le pasamos en la configuración de multer.
+
+    En las vistas en las que quiera mostrar las imágenes guardadas en bd, tengo que crear
+    etiquetas img y el src parto desde public (no poner un . antes del /)
+
