@@ -58,6 +58,36 @@ module.exports = connection;
 
 
 
+-- MULTER //imagenes.  Instalamos:   $ npm i multer
+Creamos una carpeta llamada middleware y dentro creamos un archivo llamado uploadImage.js
+dentro metemos el siguiente codigo.
+
+
+const multer = require("multer");
+
+function uploadImage() {
+  console.log("ha entrado en multer");
+  const storage = multer.diskStorage({
+    destination: "./public/images",
+    filename: function (req, file, cb) {
+      console.log(file);
+
+      cb(null, Date.now() + "_" + file.originalname);
+    },
+  });
+
+  const upload = multer({ storage: storage }).single("img");
+
+  return upload;
+}
+
+module.exports = uploadImage;
+
+
+
+	
+
+
 9-- Nos vamos Mysql Workbench seleccionamos la base de datos SHEMAS(columna de la izquierda). selecionamos la tabla y selecionamos el icono tercero pequeño del rayo.
 Añadimos el codigo este y lo ejecutamos con el rayo.
 
@@ -65,9 +95,14 @@ Añadimos el codigo este y lo ejecutamos con el rayo.
  	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 
 
-10-- Agregar en los archivos  donde vamos a utilizar  una base de datos tendremos que añadirle aparte de las 3 lineas, la linea del la data base
+10-- Agregar en los archivos  donde vamos a utilizar  una base de datos tendremos que añadirle aparte de las 3 lineas, la linea del la data base, el codigo multer para formularios que tengan imagenes y videos
 
-const connection = require("../config/db");
+var express = require("express");
+const connection = require("../config/db"); // BD
+const uploadImage = require("../middleware/uploadImage"); //IMG
+var router = express.Router();
+
+module.exports = router; // esta ira en la ultima linea del codigo
 
 
 11-- Aquellos metodos en los que necesite ejecutar una consulta a la base de datos.
